@@ -1,5 +1,5 @@
 # Используем базовый образ Node.js версии 20
-FROM node:20
+FROM node:20-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
