@@ -1,5 +1,5 @@
 # Первый этап: сборка React-приложения
-FROM node:14 as build
+FROM node:14-alpine as build
 
 WORKDIR /app
 
