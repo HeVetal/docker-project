@@ -5,10 +5,10 @@ FROM node:14
 WORKDIR /app
 
 # Копируем файл package.json в рабочую директорию
-COPY ./package.json /app
+COPY package.json /app
 
 # Копируем файл server.js в рабочую директорию
-COPY  ./server.js /app
+COPY  server.js /app
 
 # Устанавливаем зависимости, используя NPM
 RUN npm install
