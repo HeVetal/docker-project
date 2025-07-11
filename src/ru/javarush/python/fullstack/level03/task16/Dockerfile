@@ -1,5 +1,5 @@
 # Первый этап: сборка React-приложения
-FROM node AS build
+FROM node:14 AS build
 
 # Установка рабочих директорий
 WORKDIR /app

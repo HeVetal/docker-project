@@ -2,4 +2,4 @@
 docker build -t react_nginx_app .
 
 # Запуск контейнера:
-docker run -d react_nginx_app
+docker run -d -p 80:80 react_nginx_app
