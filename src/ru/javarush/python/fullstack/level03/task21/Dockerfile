@@ -1,10 +1,9 @@
 # Использование минимального базового образа Alpine
-FROM alpine:latest
+FROM python:alpine
 
 # Установка обновлений и python3
-# RUN apk add --no-cache python3-dev && \
-#     pip install --upgrade pip
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3-dev && \
+    pip install --upgrade pip
 
 # Создание рабочей директории
 WORKDIR /app
