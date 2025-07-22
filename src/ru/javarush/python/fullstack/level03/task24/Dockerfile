@@ -1,5 +1,5 @@
 # Этап 1: Сборка React-приложения
-FROM node AS builder
+FROM node:14 AS builder
 
 WORKDIR /app
 
