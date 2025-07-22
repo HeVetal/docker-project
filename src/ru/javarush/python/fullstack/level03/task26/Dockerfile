@@ -10,7 +10,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Копирование Python-приложение в рабочую директорию
-COPY . .
+COPY app.py /app/app.py
 
 # Команда запуска приложения
 CMD ["python3", "app.py"]
