@@ -5,7 +5,8 @@ FROM python:slim-buster
 WORKDIR /app
 
 # Копируем Python-приложение в контейнер
-COPY . .
+COPY app.py /app/app.py
 
 # Команда для запуска приложения
 CMD ["python", "app.py"]
+
