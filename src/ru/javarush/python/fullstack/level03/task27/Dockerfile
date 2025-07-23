@@ -1,5 +1,5 @@
 # Первый этап: сборка React-приложения
-???
+FROM node:14 AS builder
 
 # Установка рабочего каталога
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Установка зависимостей
-RUN npm install
+RUN npm ci --only=production
 
 # Копирование всего исходного кода проекта
 COPY . .
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Второй этап: развертывание с использованием nginx
-???
+FROM nginx:alpine
 
 # Копирование собранного приложения из первого этапа
 COPY --from=builder /app/build /usr/share/nginx/html
