@@ -5,6 +5,9 @@ docker build -t myapp:2.0 .
 docker tag myapp:2.0 myapp:latest
 
 # Проверка обоих тегов
-#docker run myapp:2.0
+docker run myapp:2.0
 docker run myapp:latest
+
+
+
 
