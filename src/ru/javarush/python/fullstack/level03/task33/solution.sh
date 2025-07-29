@@ -1,9 +1,9 @@
 # Сборка Docker-образа с вашим именем пользователя Docker Hub:
-docker build -t myapp:1.0
-docker tag myapp:1.0 myname/myapp:1.0
+docker build . -t heavyve/my_app:1.0
 
 # Авторизация в Docker Hub:
-
+docker login -u heavyve
 
 # Публикация образа в Docker Hub:
-docker push myname/myapp:1.0
+docker push heavyve/my_app:1.0
+
