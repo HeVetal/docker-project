@@ -1,8 +1,8 @@
 # Построение обновленного образа
-docker tag yourusername/mynodeapp:1.0 yourusername/mynodeapp:2.0
+docker build . -t heavyve/mynodeapp:2.0
 
 # Аутентификация в Docker Hub (это потребует ввода учетных данных)
-
+docker login -u heavyve
 
 # Публикация образа в Docker Hub
-docker push yourusername/mynodeapp:2.0
+docker push heavyve/mynodeapp:2.0
