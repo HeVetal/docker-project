@@ -2,4 +2,4 @@
 docker compose up -d
 
 # Непрерывно отслеживайте логи всех сервисов
-docker compose logs
+docker compose logs -f
