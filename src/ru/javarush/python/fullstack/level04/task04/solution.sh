@@ -1,2 +1,2 @@
 # Перезапуск сервиса базы данных MySQL
-docker compose restart
+docker compose restart db
