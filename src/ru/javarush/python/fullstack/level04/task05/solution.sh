@@ -16,7 +16,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Устанавливаем Docker Engine
-sudo apt install docker-ce -y
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 
 # Добавляем текущего пользователя в группу docker для использования Docker без sudo
 sudo usermod -aG docker $USER
@@ -29,3 +29,4 @@ sodo apt-get install docker-compose-plugin
 
 # Проверяем установку Docker Compose, отображая его версию
 docker compose --version
+
