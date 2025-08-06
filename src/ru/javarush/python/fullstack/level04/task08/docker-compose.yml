@@ -12,7 +12,7 @@ services:
       - "27017:27017"
     environment:
        # Задаем пароль для пользователя root
-      -MONGO_INITDB_ROOT_PASSWORD=1234
+      MONGO_INITDB_ROOT_PASSWORD: root
     volumes:
       - mongo-data:/data/db
 
