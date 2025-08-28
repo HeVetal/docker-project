@@ -5,7 +5,7 @@ docker swarm init
 docker network create -d overlay my_overlay_network
 
 # Развертывание сервиса с контейнером Nginx в overlay-сети
-docker service create --name my_service --network my_overlay_network nginx
+docker service create --name my_service --network my_overlay_network -p 8080:80 nginx
 
 # Проверка работы сервиса
 docker service ls
