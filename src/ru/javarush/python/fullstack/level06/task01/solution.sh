@@ -5,7 +5,7 @@ docker volume create my_data_volume
 docker run -d --name my_container -v my_data_volume:/data nginx
 
 # Проверьте, что том подключен к контейнеру
-docker inspect my_container
+docker volume inspect my_container | grep 'Mounts'
 
 # Проверьте, что том создан
 docker volume ls
