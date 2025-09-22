@@ -3,5 +3,5 @@ docker volume create data_volume
 docker volume create logs_volume
 
 # Запустите контейнер с Nginx, монтируя data_volume в директорию /data и logs_volume в директорию /logs
-docker run --rm -d --name my_cont_two_vol -v data_volume:/data -v logs_volume:/logs nginx
+docker run -d --name my_cont_two_vol -v data_volume:/data -v logs_volume:/logs nginx
 sleep 4
