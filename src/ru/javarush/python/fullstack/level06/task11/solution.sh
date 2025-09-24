@@ -2,12 +2,11 @@
 docker volume create config_volume
 
 # Запустите временный контейнер и запишите в том файл конфигурации
-docker run --rm -v config_volume://app busybox sh -c "echo 'configuration data' > /app/config.txt"
+docker run --rm -v config_volume:/app busybox sh -c "echo 'configuration data' > /app/app.conf"
 
 # Запустите еще один временный контейнер, чтобы проверить содержимое тома с помощью команды ls
-docker run -d --name my_conf -v config_volume://app nginx
+docker run --rm -v config_volume:/app busybox ls /app
 
 # Вывод содержимого файла конфигурации
-docker run --rm -v config_volume://app busybox ls //app
-docker run --rm -v config_volume://app busybox cat //app/config.txt
+docker run --rm -v config_volume:/app busybox cat /app/app.conf
 sleep 5
