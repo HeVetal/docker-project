@@ -1,5 +1,5 @@
 # Остановите и удалите сервис Nginx
-docker stop nginx_service
+docker service rm nginx_service
 
 # Удалите конфигурацию Nginx (например, nginx_config_v1 и nginx_config_v2)
 docker config rm nginx_config_v1
